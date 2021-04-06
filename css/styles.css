@@ -1,0 +1,363 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+html,
+body {
+  /*
+  background: #253141;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(37, 49, 65, 0.9) 0%,
+      #253141 60%,
+      #253141 100%
+    ),
+    url("https://media.kasperskydaily.com/wp-content/uploads/sites/95/2019/03/04114332/apex-legends-mobile-featured.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+   */
+  font-family: "Open Sans Condensed", sans-serif;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(37, 49, 65, 0.9) 0%,
+      #253141 60%,
+      #253141 100%
+    ),
+    url(https://media.kasperskydaily.com/wp-content/uploads/sites/95/2019/03/04114332/apex-legends-mobile-featured.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+header .left-menu {
+  display: flex;
+}
+
+header .left-menu .logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+}
+
+header .left-menu .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+header .left-menu .menu a {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+}
+
+header .left-menu .menu a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+header .left-menu .menu a .fa {
+  margin-left: 8px;
+}
+
+header .right-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .right-menu .language {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0 60px 0 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+header .right-menu .language:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+header .right-menu .language .fa {
+  margin-left: 8px;
+}
+
+header .right-menu .signin {
+  background: #0375d5;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+#featured {
+  padding: 50px 0 0;
+}
+
+#featured .videos-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 580px 2fr 1fr;
+  grid-gap: 10px;
+}
+
+#featured .videos-section .video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured .videos-section .video .image {
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+}
+
+#featured .videos-section .video .image-left {
+  background: url("https://i.ytimg.com/vi/ejB-_jF4fds/maxresdefault.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#featured .videos-section .video .image-tlou {
+  background: url("https://i.pinimg.com/originals/03/9c/d2/039cd225fdd5b8c382eb3b6e94e180dc.jpg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#featured .videos-section .video .image-witcher {
+  background: url("https://i.ytimg.com/vi/cfgu0ZAfuus/maxresdefault.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#featured .videos-section .video .image-horizon {
+  background: url("https://i.ytimg.com/vi/N_FwNNC7Ts8/maxresdefault.jpg");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#featured .videos-section .video.center {
+  width: 100%;
+  height: 349px;
+  background: red;
+}
+
+#featured .videos-section .video.video.center .image {
+  width: 100%;
+  height: 349px;
+  background: url("https://www.gry-online.pl/Galeria/Html/Wiadomosci/123623078.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  border: 2px solid #00b4f0;
+}
+
+#featured .videos-section .video:nth-child(1) .image,
+#featured .videos-section .video:nth-child(5) .image {
+  position: relative;
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow {
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow .fa,
+#featured .videos-section .video:nth-child(5) .image .arrow .fa {
+  font-size: 3rem;
+  color: #00b4f0;
+}
+
+#featured .videos-section .video:nth-child(5) .image .arrow {
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+#featured .videos-section .video:nth-child(5) .image .arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#featured .dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+#featured .dots .circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured .dots .circles .circle {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#featured .dots .circles .circle .background-color {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+  margin: 0 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+#featured .dots .circles .circle:hover .background-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00b4f0;
+}
+
+#featured .dots .circles .circle.active .background-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00b4f0;
+}
+
+#top-games {
+}
+
+#top-games .games {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+#top-games .games .game {
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#top-games .games .game-apex {
+  background: url("https://www.gloskultury.pl/wp-content/uploads/2019/02/Apex-legends-cover.jpg ");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#top-games .games .game-fortnite {
+  background: url("https://i.pinimg.com/474x/5b/52/4d/5b524dcc589c3a9f0098884c2ff21d32.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#top-games .games .game-dota {
+  background: url("https://i.pinimg.com/736x/d1/59/e9/d159e9ca272b73f56ef2b770a7c0b17b.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#top-games .games .game-lol {
+  background: url("https://www.patchesoft.com/uploads/best-mouse-league-of-legends.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#top-games .games .game-cs {
+  background: url("https://images.g2a.com/newlayout/323x433/1x1x0/e31ad1c1b8a3/5b5af9385bafe3e715232b43");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#top-games .games .game-wot {
+  background: url("https://gamespot1.cbsistatic.com/uploads/scale_medium/1197/11970954/2423514-2224535-bigcover.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#top-games .games .game .info {
+  background: #253041;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+#top-games .games .game:hover .info {
+  background: #313f55;
+}
+
+#top-games .games .game .info .title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#top-games .games .game .info .views {
+  font-weight: 300;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+#top-games .games .game .info .views .fa {
+  margin-right: 10px;
+}
